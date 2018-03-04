@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)http://tku-course-application.0xhost.net/?ckattempt=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title></title>
+</head>
+
+<?php
+        $tt=time();
+    	$password_len = 20;
+    	$key = '';
+    	$word = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_';
+    	$len = strlen($word);
+
+	    for ($i = 0; $i < $password_len; $i++) {
+    	    $key .= $word[rand() % $len];
+    	}
+		$Amt='';
+		
+		if(isset($_GET['Amt']))
+		{
+			if(is_numeric($_GET['Amt']))
+			{
+				if(intval($_GET['Amt'])>100)
+				{
+					$Amt=$_GET['Amt'];
+//					echo 'Ok';
+				}
+				else 
+				{
+//					echo 'E1';
+					$Amt='100';
+				}
+			}
+		    else 
+			{
+//				echo 'E2';
+				$Amt='100';
+			}
+		}
+		else 
+		{
+//			echo 'E3';
+			$Amt='100';
+		}
+	
+	
+$mer_array = array(
+ 'MerchantID' => 'MS15242848',
+  'TimeStamp' => $tt,
+   'MerchantOrderNo'=>$key,
+    'Version' => '1.2',
+	 'Amt' => $Amt,
+	 );
+	 ksort($mer_array);
+	 $check_merstr = http_build_query($mer_array);
+	 $CheckValue_str =
+	 "HashKey=OwOL66sruKgPJLGCPsp2p4JipT0YUUuJ&$check_merstr&HashIV=rjuxpXZUHgJr1p3R";
+	 $CheckValue = strtoupper(hash("sha256", $CheckValue_str));
+?>
+
+
+
+
+
+<body>
+<form name="formjumpvedfolnir" action="https://core.spgateway.com/MPG/mpg_gateway" method="post">
+  <input type="hidden" name="MerchantID" value="MS15242848">
+<input type="hidden" name="RespondType" value="String">
+<input type="hidden" name="CheckValue" value="<?php echo $CheckValue;?>">
+<input type="hidden" name="TimeStamp" value="<?php echo $tt;?>">
+<?php 
+
+    if(isset($_GET['LangType']))if($_GET['LangType']=='en-us')echo '<input type="hidden" name="LangType" value="en">';
+	
+	if(isset($_GET['LangType']))
+	{
+		if($_GET['LangType']=='en-us')
+		{
+			echo ' <h2>Redriect the website, please wait...';
+			echo '<input type="hidden" name="ItemDesc" value="TKU Course Application Donate">';
+		}
+		else echo '<input type="hidden" name="ItemDesc" value="TKU Course Application 贊助">';
+	}
+	else
+	{
+		echo '<input type="hidden" name="ItemDesc" value="TKU Course Application 贊助">';
+		echo ' <h2>跳轉中請稍等...';
+	}
+    
+
+?>  
+  
+  <!--<input type="button" value="送出" alt="Submit Form" /></h2>-->
+  
+<input type="hidden" name="Version" value="1.2">
+<input type="hidden" name="MerchantOrderNo" value="<?php echo $key;?>">
+<input type="hidden" name="Amt" value="<?php echo $Amt;?>">
+
+
+<input type="hidden" name="LoginType" value="0">
+<input type="hidden" name="Email" value="">
+
+
+</form>
+
+<script language="javascript"> document.formjumpvedfolnir.submit() </script>
+
+
+</body></html>
