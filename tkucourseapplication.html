@@ -34,25 +34,22 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>WebBrowser選課程式</h1>
+										<h1>Windows 桌面版選課程式</h1>
 									</header>
 									<p></p>
 									<div class="row">
 											<div class="6u 12u$(small)">
-												<font size="4">
-													<p>在使用此程式前，請先注意以下事項(重要):</p>
+												<font color="red" size="4">
+													<p>在使用此程式前，請先注意以下事項:</p>
 													<ol>
-													<font color="red">
-														<li>對於以下敘述設定功用任何不了解的地方，請遵照此說明提供的預設方式來使用，以免造成設定上的錯誤而導致選課失敗。</li>
-														<li>若覺得太冗長不想看或是看不懂新方法使用方式在這邊建議設定以及使用方式為，設定重複登入次數(Init Count)為100次於選課開放前5分鐘按下初始化按鍵，並於選課開放前5秒內按下開始(Start)選課。選課代碼方式則照之前一樣。</li>
-													</font>
+													    <li>學校系統的一次只接受一個地方登入選課限制，請勿在使用程式期間該帳號登入選課以避免不必要的程式錯誤!!</li>
 														<li>此程式需要安裝 <a target="_blank" href="https://www.microsoft.com/zh-tw/download/details.aspx?id=21">Microsoft .NET Framework 3.5 以上(含)</a>才能夠正常執行，若你尚未安裝請點<a target="_blank" href="https://www.microsoft.com/zh-tw/download/details.aspx?id=21">這裡來下載</a>進行安裝</li>
 													</ol>
 												</font>
 												<div class="row">
 												    <div class="6u 12u$(small)">
 													<ul class="actions vertical">
-														<li><a class="button big icon special fa-download fit" href="download.html?target=tkucourseapplication" >Download</a></li>
+														<li><a class="button big icon special fa-download fit" href="#" >Download</a></li>
 													</ul>
 													</div>
 													<div class="6u$ 12u$(small)">
@@ -66,33 +63,30 @@
 											</div>
 											<div class="6u$ 12u$(small)">
 											<!--put image-->
-											<span class="image main"><img src="images/tkucourseapplication_1.png" alt="" /></span>
+											<span class="image main"><img src="images/tkucourseapplication.png" alt="" /></span>
 											</div>
 											<!-- Break -->
 										</div>
 									<h3>
 								</section>
 								<section>
-								<h2><font color="red">**為了回饋使用者，此程式無限制迴圈加選功能將免費提供給大眾使用(輸入完學號後點擊Check Authority按鈕即可使用)。</font></h2>
 								<h1>使用說明</h1>
 								<h2>介面內容說明 :</h2>
 								<blockquote>
 								<font size="4" color="black">
 								<ol>
-								<li>學號(StuIDNo.) : 輸入你要選課的學號</li>
-								<li>密碼(Password) : 輸入你的"選課專用"密碼</li>
-								<li>顯示密碼(密碼旁核取方塊) : 勾選會顯示出你輸入的密碼以便做確認</li>
-								<li>模式(Mode) : 選課模式分兩種，一般加選(搶課適用)，迴圈加選(沒選到其他時候適用)</li>
-								<li>伺服器(Server) : 選擇想要在中文還是英文版本選課</li>
-								<li>快速重複登入次數(Init Count) : 快速重複登入次數，一般模式選課一次性的功能，使用一般模式選課前預先計算出的驗證碼數量。</li>
+								<li>學號 : 輸入要選課的學號</li>
+								<li>密碼 : 輸入的"選課專用"密碼</li>
+								<li>模式 : 選課模式分兩種，一般加選(搶課適用)，迴圈加選(沒選到其他時候適用)</li>
+								<li>伺服器 : 選擇要在中文或是英文版網頁選課</li>
 								</ol>
 								</font>
 								</blockquote>
 								<div class="box alt">
 											<div class="row 50% uniform">
-											<div class="2u"><span class="image fit"></span></div>
-											<div class="8u"><span class="image fit"><img src="images/tkucourseapplication_1.png" alt="" /></span></div>
-											<div class="2u$"><span class="image fit"></span></div>
+											<div class="3u"><span class="image fit"></span></div>
+											<div class="6u"><span class="image fit"><img src="images/tkucourseapplication_1.png" alt="" /></span></div>
+											<div class="3u$"><span class="image fit"></span></div>
 											</div></div>
 								<h2>
 								而本程式是採用部分符號表式來讓程式知道你的選課流程，選課的方式有分2種，輸入的方式說明如下 :
@@ -101,20 +95,7 @@
 								<h2><li>一般加選(Normal) :</h2>
 								<blockquote>
 								<font size="4" color="black">
-								
-								<br>此模式為搶課用途，主要功能是在登入前取得多組驗證碼並事先判讀完成，並在開放時前一刻利用已判讀好的驗證碼連續送出登入來達成短時間連續登入的效果，使用此模式總共需要人工操作"2步驟"來完成。</br>
-								<ol>
-								<li>先設定好連續重複登入次數(Init Count)，設定數量後按下初始化按鍵(Initilize)計算使用者設定數量的驗證碼。初始化執行的同時可以輸入要選課的代碼在程式內。</li>
-								<li>初始執行完成後設定好您要選的科目按下開始(Start)按鍵即可開始選課。</li>
-								</ol>
-								<strong><font color="red">
-								<br>使用時請務必注意以下事項(重要!!):</br>
-								<ol>
-								<li>由於判讀驗證碼需花費一定時間(一個驗證碼約3-5秒)，計算出的驗證碼有時效性必須在一定時間內使用。所以不能設定太多組驗證碼，執行初始化時間也無法太早</li>
-								<li>目前程式無暫停以及取消功能，若輸入錯誤內容按下Start欲取消只能關閉程式再重新開啟。而重新開啟執行必須重新初始化計算登入驗證碼，在按下開始前請謹慎檢查是否輸入有誤請注意!!</li>
-								<li>本說明建議設定以及使用方式為，設定重複登入次數(Init Count)為100次於選課開放前5分鐘按下初始化按鍵，並於選課開放前5秒內按下開始選課鍵最佳。</li>
-								</ol>
-								</font></strong>
+								<br><font color="red">**此模式為搶課用途於選課開放前幾分鐘按下開始執行鍵即可(開放選課時間前一分鐘按最佳)!!</font></br>
 								<br>此模式之間的分隔符號判斷為“>”, “#” ,”,” 和換行來表示</br>
 								“>” 表示你的選課排順位區隔</br>
 								“#” 表示要退選此課程，加在4位數代碼前面，請小心使用!!</br>
@@ -215,16 +196,16 @@
 											<p>Chrome Extension選課程式</p>
 										</article>
 										<article>
-											<a href="chromeautofill.html" class="image"><img src="images/chromeautofill.png" alt="" /></a>
-											<p>淡江選課驗證碼幫手</p>
-										</article>
-										<article>
-											<a href="tkucoursewinapp.html" class="image"><img src="images/tkucoursewinapp1.png" alt="" /></a>
-											<p>Windows 版本 App 選課程式</p>
-										</article>
-										<article>
 											<a href="tkucourseandroid.html" class="image"><img src="images/app_layout.jpg" alt="" /></a>
 											<p>淡江大學隨時隨地選課</p>
+										</article>
+										<article>
+											<a href="tkucourseapplication.html" class="image"><img src="images/tkucourseapplication.png" alt="" /></a>
+											<p>Windows 桌面版選課程式</p>
+										</article>
+										<article>
+											<a href="chromeautofill.html" class="image"><img src="images/chromeautofill.png" alt="" /></a>
+											<p>淡江選課驗證碼幫手</p>
 										</article>
 									</div>
 								</section>
