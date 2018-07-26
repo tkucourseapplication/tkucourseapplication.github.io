@@ -4,6 +4,9 @@ app.config(function($routeProvider) {
     .when("/", {
         templateUrl : "views/index.html"
     })
+	.when("/aboutus", {
+        templateUrl : "views/aboutus.html"
+    })
 	.when("/chromeautofill", {
         templateUrl : "views/chromeautofill.html"
     })
