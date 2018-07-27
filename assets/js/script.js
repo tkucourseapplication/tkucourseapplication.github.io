@@ -60,5 +60,8 @@ app.config(function($routeProvider) {
     })
 	.when("/tkucoursewinapp", {
         templateUrl : "views/tkucoursewinapp.html"
+    })
+	.otherwise({
+        templateUrl : "views/index.html"
     });
 });
